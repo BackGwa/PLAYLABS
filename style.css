@@ -1,0 +1,160 @@
+/* font */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+/* light mode color */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #44ffd2;
+        --color: #331c1c;
+    }
+}
+
+/* dark mode color */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000000;
+        --color: #44ffd2;
+    }
+}
+
+/* page */
+
+html,
+body {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    margin: 0;
+    overflow: hidden;
+    font-family: "Pretendard Variable";
+}
+
+/* form */
+
+form {
+    position: absolute;
+    width: calc(100% - 3.5rem);
+    max-width: 40rem;
+    height: calc(75% - 6rem);
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* form layout */
+
+form-header {
+    position: relative;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form-content {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 7rem);
+    display: flex;
+    flex-direction: column;
+}
+
+form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+/* form header */
+
+form-title {
+    color: var(--color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+form-subtitle {
+    color: var(--color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+/* form content label */
+form-label {
+    color: var(--color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+form-element p {
+    color: var(--color);
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* form input */
+form-element input {
+    width: calc(100% - 2rem);
+    height: 3.2rem;
+    margin-bottom: 1rem;
+    padding: 0rem 1rem 0rem 1rem;
+    background: transparent;
+    border: solid 1px var(--color);
+    border-radius: 18px;
+    outline: none;
+    color: var(--color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Pretendard Variable";
+}
+
+/* form content button */
+
+form-button {
+    position: absolute;
+    width: 100%;
+    height: 3.7rem;
+    background: var(--color);
+    bottom: 0;
+    border-radius: 18px;
+}
+
+form-button-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    color: var(--bg);
+    font-weight: 700;
+}
+
+/* content element */
+
+p {
+    margin-top: 5px;
+}
+
+/* animation */
+.form_change {
+    animation: form_change 1s cubic-bezier(.04,.99,.36,1.01) forwards;
+}
+
+@keyframes form_change {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1.0;
+    }
+
+    50% {
+        transform: translate(-200%, -50%);
+        opacity: 0.0;
+    }
+    
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1.0;
+    }
+}
