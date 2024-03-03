@@ -34,7 +34,7 @@ form {
     position: absolute;
     width: calc(100% - 3.5rem);
     max-width: 40rem;
-    height: calc(75% - 6rem);
+    height: calc(75% - 3rem);
     display: flex;
     flex-direction: column;
     top: 50%;
