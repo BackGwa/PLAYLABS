@@ -9,7 +9,7 @@ let title_index = [
 let subtitle_index = [
     "PLAYLABS에 관심을 가져주셔서 감사드려요!",
     "이제 가입을 시작할게요!",
-    "사전 가입 신청이 완료되었어요!"
+    "가입 신청이 완료되었어요!"
 ]
 
 let label_index = [
@@ -114,7 +114,7 @@ function check_send() {
     aza = document.getElementById("aza").value;
 
     if (school_number.length == 4 && names.length >= 2 && phone.length >= 11 && aza.length > 1 ) {
-        send([school_number, names, ymd, phone])
+        send([school_number, names, phone, aza])
         return true;
     }
     return false;
