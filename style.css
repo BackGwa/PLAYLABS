@@ -102,7 +102,7 @@ form-element input {
     padding: 0rem 1rem 0rem 1rem;
     background: transparent;
     border: solid 1px var(--color);
-    border-radius: 18px;
+    border-radius: 20px;
     outline: none;
     color: var(--color);
     font-size: 1.2rem;
@@ -118,7 +118,7 @@ form-button {
     height: 3.7rem;
     background: var(--color);
     bottom: 0;
-    border-radius: 18px;
+    border-radius: 20px;
 }
 
 form-button-label {

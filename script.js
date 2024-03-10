@@ -19,8 +19,8 @@ let label_index = [
 ]
 
 let element_index = [
-    `<p>PLAYLABS 가입 신청을 위해, 정보가 필요해요.<br><br>가입을 위해서, 사용되는 개인정보는 아래와 같아요.<br>(학급 번호, 이름, 생년월일)<br><br>개인정보는 안전하게 수집되며,<br>PLAYLABS의 관리자가 볼 수 있어요.<br><br>위와 같은 내용에 동의를 한다면,<br>가입 절차를 시작할게요!</p>`,
-    `<input type="text" placeholder="학급 번호 4자리" id="school_number"><input type="text" placeholder="이름" id="name"><input type="text" placeholder="생년월일 6자리" id="ymd"><input type="tel" placeholder="전화번호" id="phone">`,
+    `<p>PLAYLABS 가입 신청을 위해, 아래와 같은 정보를 수집해요!<br>(학급 번호, 이름, 전화번호)<br><br>개인정보는 안전하게 수집되며,<br>PLAYLABS의 관리자만 볼 수 있어요.<br><br>위와 같은 내용에 동의한다면,<br>가입 절차를 시작할게요!</p>`,
+    `<input type="text" placeholder="학급 번호 4자리" id="school_number"><input type="text" placeholder="이름" id="name"><input type="tel" placeholder="전화번호" id="phone"><input type="text" placeholder="짧은 소개 또는 포부" id="aza">`,
     ``
 ]
 
@@ -61,7 +61,7 @@ function play_animation() {
     form.classList.add("form_change");
     setTimeout(() => {
         update();
-    }, 500);
+    }, 350);
     setTimeout(() => {
         form.classList.remove("form_change");
     }, 1000);
@@ -72,8 +72,7 @@ function send(data) {
     const datas = {
         embeds: [
             {
-                title: "사전 신청",
-                description: "사전 신청이 등록되었습니다.",
+                title: "새로운 메이커 신청",
                 color: 0x44ffd2,
                 fields: [
                     {
@@ -87,15 +86,15 @@ function send(data) {
                         inline: true
                     },
                     {
-                        name: "생년월일",
-                        value: data[2],
-                        inline: true
-                    },
-                    {
                         name: "전화번호",
-                        value: data[3],
+                        value: data[2],
                         inline: false
                     },
+                    {
+                        name: "포부",
+                        value: data[3],
+                        inline: true
+                    }
                 ]
             }
         ]
@@ -111,10 +110,10 @@ function send(data) {
 function check_send() {
     school_number = document.getElementById("school_number").value;
     names = document.getElementById("name").value;
-    ymd = document.getElementById("ymd").value;
     phone = document.getElementById("phone").value;
+    aza = document.getElementById("aza").value;
 
-    if (school_number.length == 4 && names.length >= 2 && ymd.length == 6 && phone.length >= 11) {
+    if (school_number.length == 4 && names.length >= 2 && phone.length >= 11 && aza.length > 1 ) {
         send([school_number, names, ymd, phone])
         return true;
     }
@@ -131,7 +130,7 @@ function next() {
                 form_index++;
                 play_animation();
             } else {
-                alert("양식과 일치하지 않거나, 오류가 발생했어요!");
+                alert("양식과 일치하지 않아요!");
             }
         } else {
             location.href = "javascript:window.close();"
