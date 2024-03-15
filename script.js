@@ -1,32 +1,33 @@
 let form_index = 0;
 
 let title_index = [
-    "반가워요!",
-    "가입하기",
+    "잠시만요!",
+    "등록하기",
     "성공했어요!"
 ]
 
 let subtitle_index = [
-    "PLAYLABS에 관심을 가져주셔서 감사드려요!",
-    "이제 가입을 시작할게요!",
-    "가입 신청이 완료되었어요!"
+    "관심을 가져주셔서 감사드리지만..",
+    "신청 대기열에 등록할게요!",
+    "대기열에 등록했어요!"
 ]
 
 let label_index = [
-    "알아두세요!",
+    "대기열 신청이 필요해요!",
     "",
     ""
 ]
 
 let element_index = [
-    `<p>PLAYLABS 가입 신청을 위해, 아래와 같은 정보를 수집해요!<br>(학급 번호, 이름, 전화번호)<br><br>개인정보는 안전하게 수집되며,<br>PLAYLABS의 관리자만 볼 수 있어요.<br><br>위와 같은 내용에 동의한다면,<br>가입 절차를 시작할게요!</p>`,
-    `<input type="text" placeholder="학급 번호 4자리" id="school_number"><input type="text" placeholder="이름" id="name"><input type="tel" placeholder="전화번호" id="phone"><input type="text" placeholder="짧은 소개 또는 포부" id="aza">`,
+
+    `<p>현재 PLAYLABS 신청 기간이 지났지만,<br>추후에 더 많은 메이커를 모집할 수 있어요!<br><br><b style="font-weight: 600;">우선 대기열에 등록해보세요!</b><br>대기열 등록 시, (학급 번호, 이름, 전화번호)의<br>개인정보를 수집해요!<br><br>동의한다면, 대기열 신청을 시작할게요!`,
+    `<input type="text" placeholder="학급 번호 4자리" id="school_number"><input type="text" placeholder="이름" id="name"><input type="tel" placeholder="전화번호" id="phone"><input type="text" placeholder="포부나 하고 싶은 말" id="aza">`,
     ``
 ]
 
 let submit_label_index = [
     "동의하고 시작하기",
-    "가입 신청하기",
+    "대기열 등록하기",
     "종료하기"
 ]
 
@@ -72,7 +73,7 @@ function send(data) {
     const datas = {
         embeds: [
             {
-                title: "새로운 메이커 신청",
+                title: "대기",
                 color: 0x44ffd2,
                 fields: [
                     {
