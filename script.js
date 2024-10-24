@@ -8,8 +8,8 @@ let title_index = [
 
 let subtitle_index = [
     "관심을 가져주셔서 감사드려요!",
-    "신청 대기열에 등록할게요!",
-    "대기열에 등록했어요!"
+    "동아리에 신청할게요!",
+    "동아리에 신청했어요!"
 ]
 
 let label_index = [
@@ -73,7 +73,7 @@ function send(data) {
     const datas = {
         embeds: [
             {
-                title: "대기",
+                title: "PLAYLABS 신청 : 25학년도",
                 color: 0x44ffd2,
                 fields: [
                     {
