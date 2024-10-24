@@ -1,33 +1,33 @@
 let form_index = 0;
 
 let title_index = [
-    "잠시만요!",
+    "반가워요!",
     "등록하기",
     "성공했어요!"
 ]
 
 let subtitle_index = [
-    "관심을 가져주셔서 감사드리지만..",
+    "관심을 가져주셔서 감사드려요!",
     "신청 대기열에 등록할게요!",
     "대기열에 등록했어요!"
 ]
 
 let label_index = [
-    "대기열 신청이 필요해요!",
+    "새로운 메이커를 모집해요!",
     "",
     ""
 ]
 
 let element_index = [
 
-    `<p>현재 PLAYLABS 신청 기간이 지났지만,<br>추후에 더 많은 메이커를 모집할 수 있어요!<br><br><b style="font-weight: 600;">우선 대기열에 등록해보세요!</b><br>대기열 등록 시, (학급 번호, 이름, 전화번호)의<br>개인정보를 수집해요!<br><br>동의한다면, 대기열 신청을 시작할게요!`,
+    `<p>25년도에 같이할 메이커를 모집하고 있어요!<br><br><b style="font-weight: 600;">지금 PLAYLABS 동아리를 신청해보세요!</b><br>신청 시, (학급 번호, 이름, 전화번호)의<br>개인정보를 수집해요!<br><br>동의한다면, 동아리 신청을 시작할게요!`,
     `<input type="text" placeholder="학급 번호 4자리" id="school_number"><input type="text" placeholder="이름" id="name"><input type="tel" placeholder="전화번호" id="phone"><input type="text" placeholder="포부나 하고 싶은 말" id="aza">`,
     ``
 ]
 
 let submit_label_index = [
     "동의하고 시작하기",
-    "대기열 등록하기",
+    "동아리 신청하기",
     "종료하기"
 ]
 
@@ -69,7 +69,7 @@ function play_animation() {
 }
 
 function send(data) {
-    const URL = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTIxMzc1MDExOTQ4NTQxMTM0OC8yQXJ4d2pzZ0VnLUQ0QVNPNGg2X2VSZWdRY3JQdzdyMnctTTZWTlotMHVVaGhSWERiTEMzWEtLQVZqOFl6MXd1ZVJZNg==';
+    const URL = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTI5OTAwMDUzOTY1MjAzMDQ2NC85SklPZnFWZHNwSlpkTXhyWW40UWhrUXJGOG16Z0Y2WENXallTTlZMRXJ6aGRsdHdROEpqVjA3M1M3bzRNWS1lcmZiZA==';
     const datas = {
         embeds: [
             {
