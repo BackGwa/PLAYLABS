@@ -20,7 +20,7 @@ let label_index = [
 
 let element_index = [
 
-    `<p>25년도에 같이할 메이커를 모집하고 있어요!<br><br><b style="font-weight: 600;">지금 PLAYLABS 동아리를 신청해보세요!</b><br>신청 시, (학급 번호, 이름, 전화번호)의<br>개인정보를 수집해요!<br><br>동의한다면, 동아리 신청을 시작할게요!`,
+    `<p>25년도에 같이할 메이커를 모집하고 있어요!<br><br><b style="font-weight: 600;">지금 PLAYLABS 동아리를 신청해보세요!</b><br>신청 시, (학급 번호, 이름, 전화번호)의<br>개인정보를 수집해요!<br><br>동의한다면, 동아리 신청을 시작할게요!<br><br>- 최근 서비스 공격 시도가 적발되었습니다.<br>- 공격 시도 적발 시 처벌될 수 있습니다.`,
     `<input type="text" placeholder="학급 번호 4자리" id="school_number"><input type="text" placeholder="이름" id="name"><input type="tel" placeholder="전화번호" id="phone"><input type="text" placeholder="포부나 하고 싶은 말" id="aza">`,
     ``
 ]
@@ -69,7 +69,7 @@ function play_animation() {
 }
 
 function send(data) {
-    const URL = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTI5OTAwMDUzOTY1MjAzMDQ2NC85SklPZnFWZHNwSlpkTXhyWW40UWhrUXJGOG16Z0Y2WENXallTTlZMRXJ6aGRsdHdROEpqVjA3M1M3bzRNWS1lcmZiZA==';
+    const URL = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTMyNjA1MzM2ODg1NDA4NTY5My9keTVIUktiSWxPM2ppODFGZ2o3QXZOcnNvUjFHYjZFMVlYaW1CcUlrTXZseVJCaW5VbUNEYmxtbjFadmFpYWppckJrUw==';
     const datas = {
         embeds: [
             {
